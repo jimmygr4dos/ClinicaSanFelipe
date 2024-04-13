@@ -1,5 +1,5 @@
 ﻿using ClinicaSanFelipe.Core.Entities;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 using ClinicaSanFelipe.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;

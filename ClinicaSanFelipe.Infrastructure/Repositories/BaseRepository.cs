@@ -1,4 +1,4 @@
-﻿using ClinicaSanFelipe.Core.Interfaces;
+﻿using ClinicaSanFelipe.Core.Interfaces.Repositories;
 using ClinicaSanFelipe.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 

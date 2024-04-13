@@ -3,7 +3,7 @@ using ClinicaSanFelipe.Api.Responses;
 using ClinicaSanFelipe.Core.DTOs;
 using ClinicaSanFelipe.Core.Entities;
 using ClinicaSanFelipe.Core.Enumerations;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 using ClinicaSanFelipe.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

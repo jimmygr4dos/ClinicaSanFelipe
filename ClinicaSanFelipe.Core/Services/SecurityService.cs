@@ -1,5 +1,6 @@
 ﻿using ClinicaSanFelipe.Core.Entities;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Repositories;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 
 namespace ClinicaSanFelipe.Core.Services
 {

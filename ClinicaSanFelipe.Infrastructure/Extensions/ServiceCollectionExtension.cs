@@ -1,5 +1,6 @@
 ﻿using ClinicaSanFelipe.Core.CustomEntities;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Repositories;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 using ClinicaSanFelipe.Core.Services;
 using ClinicaSanFelipe.Infrastructure.Data;
 using ClinicaSanFelipe.Infrastructure.Interfaces;
@@ -48,6 +49,7 @@ namespace ClinicaSanFelipe.Infrastructure.Extensions
             services.AddTransient<ISecurityService, SecurityService>();
             services.AddTransient<IProductoService, ProductoService>();
             services.AddTransient<ICompraService, CompraService>();
+            services.AddTransient<IVentaService, VentaService>();
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<IPasswordService, PasswordService>();

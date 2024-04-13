@@ -3,7 +3,7 @@ using ClinicaSanFelipe.Api.Responses;
 using ClinicaSanFelipe.Core.CustomEntities;
 using ClinicaSanFelipe.Core.DTOs;
 using ClinicaSanFelipe.Core.Entities;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;

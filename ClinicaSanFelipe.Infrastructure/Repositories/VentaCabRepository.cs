@@ -4,9 +4,9 @@ using ClinicaSanFelipe.Infrastructure.Data;
 
 namespace ClinicaSanFelipe.Infrastructure.Repositories
 {
-    public class MovimientoCabRepository : BaseRepository<MovimientoCab>, IMovimientoCabRepository
+    public class VentaCabRepository : BaseRepository<VentaCab>, IVentaCabRepository
     {
-        public MovimientoCabRepository(ClinicaSanFelipeContext context) : base(context)
+        public VentaCabRepository(ClinicaSanFelipeContext context) : base(context)
         {
         }
     }

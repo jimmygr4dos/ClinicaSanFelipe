@@ -1,6 +1,5 @@
-﻿using ClinicaSanFelipe.Core.Interfaces;
+﻿using ClinicaSanFelipe.Core.Interfaces.Repositories;
 using ClinicaSanFelipe.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore.Storage;
 
 namespace ClinicaSanFelipe.Infrastructure.Repositories
 {
@@ -11,6 +10,8 @@ namespace ClinicaSanFelipe.Infrastructure.Repositories
         private readonly ProductoRepository _productoRepository;
         private readonly CompraCabRepository _compraCabRepository;
         private readonly CompraDetRepository _compraDetRepository;
+        private readonly VentaCabRepository _ventaCabRepository;
+        private readonly VentaDetRepository _ventaDetRepository;
         private readonly MovimientoCabRepository _movimientoCabRepository;
         private readonly MovimientoDetRepository _movimientoDetRepository;
 
@@ -22,6 +23,8 @@ namespace ClinicaSanFelipe.Infrastructure.Repositories
         public IProductoRepository ProductoRepository => _productoRepository ?? new ProductoRepository(_context);
         public ICompraCabRepository CompraCabRepository => _compraCabRepository ?? new CompraCabRepository(_context);
         public ICompraDetRepository CompraDetRepository => _compraDetRepository ?? new CompraDetRepository(_context);
+        public IVentaCabRepository VentaCabRepository => _ventaCabRepository ?? new VentaCabRepository(_context);
+        public IVentaDetRepository VentaDetRepository => _ventaDetRepository ?? new VentaDetRepository(_context);
         public IMovimientoCabRepository MovimientoCabRepository => _movimientoCabRepository ?? new MovimientoCabRepository(_context);
         public IMovimientoDetRepository MovimientoDetRepository => _movimientoDetRepository ?? new MovimientoDetRepository(_context);
 

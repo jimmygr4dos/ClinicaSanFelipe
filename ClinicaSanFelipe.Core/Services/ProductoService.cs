@@ -1,6 +1,7 @@
 ﻿using ClinicaSanFelipe.Core.CustomEntities;
 using ClinicaSanFelipe.Core.Entities;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Repositories;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 using Microsoft.Extensions.Options;
 
 namespace ClinicaSanFelipe.Core.Services

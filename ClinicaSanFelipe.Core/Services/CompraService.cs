@@ -1,6 +1,7 @@
 ﻿using ClinicaSanFelipe.Core.Entities;
 using ClinicaSanFelipe.Core.Exceptions;
-using ClinicaSanFelipe.Core.Interfaces;
+using ClinicaSanFelipe.Core.Interfaces.Repositories;
+using ClinicaSanFelipe.Core.Interfaces.Services;
 
 namespace ClinicaSanFelipe.Core.Services
 {
@@ -14,21 +15,23 @@ namespace ClinicaSanFelipe.Core.Services
         public async Task<Compra?> GetById(int id)
         {
             var compraCab = await _unit.CompraCabRepository.GetById(id);
-            
-            if (compraCab == null) return null;
-            
-            Compra compra = new Compra()
+
+            if (compraCab == null) 
+            {
+                throw new BusinessException($"No existe la compra con Id: {id}");
+            }
+
+            Compra compra = new Compra
             {
                 Cabecera = compraCab,
                 Detalle = compraCab.CompraDets.ToList()
             };
-
             return compra;            
         }
 
         public List<Compra> GetAll()
         {
-            List<Compra> comprasList = new List<Compra>();
+            List<Compra> compras = new List<Compra>();
             var comprasCab = _unit.CompraCabRepository.GetAll();
             foreach(var item in comprasCab)
             {
@@ -37,9 +40,9 @@ namespace ClinicaSanFelipe.Core.Services
                     Cabecera = item,
                     Detalle = item.CompraDets.ToList()
                 };
-                comprasList.Add(compra);
+                compras.Add(compra);
             }
-            return comprasList;
+            return compras;
         }
 
         public async Task Add(Compra compra)

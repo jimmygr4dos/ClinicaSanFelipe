@@ -12,6 +12,9 @@ namespace ClinicaSanFelipe.Infrastructure.Mappings
             CreateMap<CompraCab, CompraCabDTO>().ReverseMap();
             CreateMap<CompraDet, CompraDetDTO>().ReverseMap();
             CreateMap<Compra, CompraDTO>().ReverseMap();
+            CreateMap<VentaCab, VentaCabDTO>().ReverseMap();
+            CreateMap<VentaDet, VentaDetDTO>().ReverseMap();
+            CreateMap<Venta, VentaDTO>().ReverseMap();
             CreateMap<Security, SecurityDTO>().ReverseMap();
         }
     }
